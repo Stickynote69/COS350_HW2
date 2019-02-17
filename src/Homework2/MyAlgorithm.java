@@ -2,6 +2,7 @@ package Homework2;
 import java.util.ArrayList;
 
 public class MyAlgorithm {
+	
 	public static void myAlgorithm(int n, int count, ArrayList<Integer> pogos, ArrayList<Integer> jump, ArrayList<ArrayList<Integer>> choices) {
 		ArrayList<Integer> steps = new ArrayList<Integer>();
 		steps.addAll(jump);
