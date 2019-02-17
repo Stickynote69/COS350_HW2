@@ -20,12 +20,9 @@ public class J5 {
 		MyAlgorithm.myAlgorithm(dist,0,pogos,new ArrayList<Integer>(),choices);
 		System.out.println(choices.size());
 		for(ArrayList<Integer> x : choices) {
-			int cost = 0;
 			for(int y : x) {
 				System.out.print(y + " ");
-				cost ++;
 			}
-			System.out.print("Cost: " + cost);
 			System.out.print("\n");
 		}
 //		long timeEnd = System.currentTimeMillis();
