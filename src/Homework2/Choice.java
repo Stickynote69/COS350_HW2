@@ -9,6 +9,10 @@ public class Choice {
 		this.path = null;
 		this.cost = -1;
 	}
+	public Choice(ArrayList<Integer> path) {
+		this.path = path;
+		this.cost = -1;
+	}
 	
 	public ArrayList<Integer> getPath() {return this.path;}
 	public void setPath(ArrayList<Integer> path) {this.path = path;}

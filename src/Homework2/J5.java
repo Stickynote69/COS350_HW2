@@ -25,13 +25,18 @@ public class J5 {
 		
 		// Sorts pogos before algorithm
 		pogos = MyAlgorithms.pogoSort(pogos);
-		MyAlgorithms.T1(dist,0,pogos,new ArrayList<Integer>(),choices);
+		MyAlgorithms.myAlgorithm(dist,0,pogos,new ArrayList<Integer>(),choices);
 		System.out.println(choices.size());
-		for(Choice x : choices) {
-			for(int y : x) {
-				System.out.print(y + " ");
+		if(type.equals("E")) {
+			for(Choice x : choices) {
+				for(int y : x.getPath()) {
+					System.out.print(y + " ");
+				}
+				System.out.print("\n");
 			}
-			System.out.print("\n");
+		}
+		else {
+			System.out.println("Fuck");
 		}
 	}
 	
