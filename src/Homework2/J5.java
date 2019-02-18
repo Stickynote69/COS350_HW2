@@ -24,11 +24,12 @@ public class J5 {
 		scan.close();
 		
 		// Sorts pogos before algorithm
-		pogos = MyAlgorithms.pogoSort(pogos);
-		MyAlgorithms.myAlgorithm(dist,0,pogos,new ArrayList<Integer>(),choices);
-		System.out.println(choices.size());
+		pogos = MyAlgorithms.pogoBubbleSort(pogos);
+		MyAlgorithms.T1(dist,0,pogos,new ArrayList<Integer>(), new ArrayList<Integer>(),choices);
 		if(type.equals("E")) {
+			System.out.println(choices.size());
 			for(Choice x : choices) {
+				System.out.print(x.getPathCost() + " ");
 				for(int y : x.getPath()) {
 					System.out.print(y + " ");
 				}
@@ -36,8 +37,17 @@ public class J5 {
 			}
 		}
 		else {
-			System.out.println("Fuck");
+			int min = choices.get(0).getPathCost();
+			int index = 0;
+			for(int x = 1; x < choices.size(); x++) {
+				if(choices.get(x).getPathCost() < min) {
+					min = choices.get(x).getPathCost();
+					index = x;
+				}	
+			}
+			System.out.print(min + " ");
+			for(int x : choices.get(index).getPath())
+				System.out.print(x + " ");
 		}
 	}
-	
 }
