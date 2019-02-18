@@ -9,13 +9,18 @@ public class J5 {
 		Scanner scan = new Scanner(System.in);
 		ArrayList<Pogo> pogos = new ArrayList<Pogo>();
 		ArrayList<Choice> choices = new ArrayList<Choice>();
+		int[] coinPiles;
 		int dist;
 		String type;
 		type = scan.next();
 		dist = scan.nextInt();
+		coinPiles = new int[dist];
 		String line = scan.nextLine();
 		scan = new Scanner(line);
 		while(scan.hasNext()) {
+			int pile = scan.nextInt();
+			int location = scan.nextInt();
+			coinPiles[location] = pile;
 			Pogo temp = new Pogo();
 			temp.setCost(scan.nextInt());
 			temp.setJump(scan.nextInt());
