@@ -15,6 +15,7 @@ public class J5 {
 		type = scan.next();
 		dist = scan.nextInt();
 		coinPiles = new int[dist];
+		// Fills coinpile array with zeros
 		for(int z = 0; z < coinPiles.length - 1; z++) {
 			coinPiles[z] = 0;
 		}
@@ -30,7 +31,6 @@ public class J5 {
 			pogos.add(temp);
 		}
 		scan.close();
-		
 		// Sorts pogos before algorithm
 		pogos = MyAlgorithms.pogoBubbleSort(pogos);
 		MyAlgorithms.T2(dist,0,coinPiles,pogos,new ArrayList<Integer>(),new ArrayList<Integer>(),choices);
