@@ -15,6 +15,9 @@ public class J5 {
 		type = scan.next();
 		dist = scan.nextInt();
 		coinPiles = new int[dist];
+		for(int z = 0; z < coinPiles.length - 1; z++) {
+			coinPiles[z] = 0;
+		}
 		String line = scan.nextLine();
 		scan = new Scanner(line);
 		while(scan.hasNext()) {
@@ -30,7 +33,7 @@ public class J5 {
 		
 		// Sorts pogos before algorithm
 		pogos = MyAlgorithms.pogoBubbleSort(pogos);
-		MyAlgorithms.T1(dist,0,pogos,new ArrayList<Integer>(), new ArrayList<Integer>(),choices);
+		MyAlgorithms.T2(dist,0,coinPiles,pogos,new ArrayList<Integer>(),new ArrayList<Integer>(),choices);
 		if(type.equals("E")) {
 			System.out.println(choices.size());
 			for(Choice x : choices) {
